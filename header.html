@@ -10,7 +10,7 @@
         <!-- Main navigation list -->
         <ul class="navigation-menu">
             {% for item in navigation %}
-            <li>
+            <li {% if page.url == item.url %} aria-current="page"{% endif %}>
                 <a href="{{item.url}}">{{item.text}}</a>
             </li>
             {%- endfor%}

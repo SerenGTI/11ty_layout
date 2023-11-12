@@ -8,6 +8,7 @@
 
     <title>{{ title }}</title>
 
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
     <link rel="stylesheet" type="text/css" href="/css/base.css" />
 
     <title></title>
@@ -17,5 +18,9 @@
     {% include "header.html" %}
 
     <div id="content">{{ content }}</div>
+
+    {% for post in collections.post limit:2 %}
+      {{post.data.title}}
+    {% endfor %}
   </body>
 </html>
