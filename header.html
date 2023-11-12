@@ -1,0 +1,19 @@
+<header id="header" role="banner" class="header">
+    <!-- Some people will want to skip the navigation -->
+    <a href="#content" class="skip-link screen-reader-text">Skip</a>
+
+    <nav class="navigation">
+        <a class="site-logo" href="/">
+        {% include "_data/nav_icon.html" %}
+        </a>
+
+        <!-- Main navigation list -->
+        <ul class="navigation-menu">
+            {% for item in navigation %}
+            <li>
+                <a href="{{item.url}}">{{item.text}}</a>
+            </li>
+            {%- endfor%}
+        </ul>
+    </nav>
+</header>
