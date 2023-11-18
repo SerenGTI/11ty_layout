@@ -6,12 +6,21 @@
 
     <meta name="Description" content="{{ description }}" />
 
-    <title>{{ title }}</title>
-
+    <!-- website colors -->
     <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+
+    <!-- base definitions -->
     <link rel="stylesheet" type="text/css" href="/css/base.css" />
 
-    <title></title>
+    <!-- fonts -->
+    <link rel="stylesheet" type="text/css" href="/font/lm_regular/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="/font/lm_bold/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="/font/lm_italic/stylesheet.css" />
+
+    <!-- syntax highlighting color scheme -->
+    <link rel="stylesheet" type="text/css" href="/css/prism.css" />
+
+    <title>{{ title }}</title>
   </head>
   <body>
     <!-- header -->
@@ -19,8 +28,7 @@
 
     <div id="content">{{ content }}</div>
 
-    {% for post in collections.post limit:2 %}
-      {{post.data.title}}
-    {% endfor %}
+    <!-- footer -->
+    {% include "footer.html" %}
   </body>
 </html>

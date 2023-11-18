@@ -3,16 +3,14 @@ layout: base
 ---
 <link rel="stylesheet" type="text/css" href="/css/article.css" />
 <article class="entry">
-    <header class="entry-header">
-        <h1 class="entry-title">{{title}}</h1>
-        <ul class="meta">
-            <li class="meta-date">
-            {{ date | formatDate }}
-            </li>
-            <li class="meta-reading-time">{{ title }}</li>
-        </ul>
-    </header>
     <div class="entry-content">
         {{ content }}
     </div>
+    <div class="entry-date">
+        Posted on {{ date | formatDate }}
+    <div>
 </article>
+
+{% for post in collections.post limit:2 %}
+  {{post.data.title}}
+{% endfor %}

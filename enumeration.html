@@ -1,0 +1,20 @@
+---
+layout: base
+---
+
+{{ content }}
+
+<link rel="stylesheet" type="text/css" href="/css/article.css" />
+<ol class="taglist">
+{% for proj in collections[enumerate_tag] %}
+    <li>
+        <a href="{{ proj.url }}">
+            <span class="heading">
+                <span class="title">{{proj.data.title}}</span>
+                <span class="date">{{ proj.data.date | formatDate }}</span>
+            </span>
+            <p>{{ proj.data.description }}</p>
+        </a>
+    </li>
+{% endfor %}
+</ol>
